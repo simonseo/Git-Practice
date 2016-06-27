@@ -19,3 +19,6 @@ Generally, a sausage is long and round like a dick;
 a patty is round and flat like a pancake.
 세번째 줄도 추가
 네번째!
+<!-- smg 브랜치에서 작성 -->
+이런걸 작성했습니다.
+이런 것도 같이 작성했습니다.
