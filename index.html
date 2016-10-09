@@ -129,6 +129,7 @@ class: center, middle, inverse
 
 # Git 101
 ### Must-know skill for CS peeps
+### goo.gl/Z9qnTx
 .footnote[.red.bold[*] Brought to you by HackAD & Simon]
 ---
 
@@ -136,22 +137,10 @@ class: center, middle, inverse
 
 1. Setup
   - Create [github.com](github.com) account
-  - Install [GitHub Desktop](https://desktop.github.com/)
+  - Install [SourceTree](https://www.sourcetreeapp.com/)
 1. Introduction to Version Control System
 1. **Why** we need to use GitHub
 1. **How** to use Git & GitHub
-  1. Create
-      - create repository on GitHub (README.md - markdown syntax)
-      - clone repo to local (remote vs local)
-  1. Edit
-      - stage files
-        -.gitignore
-      - commit to local repo
-      - see changelog & snapshots
-      - push
-  1. Collaborate
-      - branch (off-topic: create blog with GitHub)
-      - 
 
 ---
 class: center, middle, inverse
@@ -163,9 +152,9 @@ class: center, middle, inverse
 Let's dive in head first.
 
 1. Create [github.com](github.com) account
-1. Install [GitHub Desktop](https://desktop.github.com/)
+1. Install [SourceTree](https://www.sourcetreeapp.com/)
+  - Super light users may prefer to use [GitHub Desktop](https://desktop.github.com)
   - Advanced users may prefer to use command lines
-  - At the end of the presentation, I'll tell you potentially better apps.
   - Linux users can use [GitKraken](https://www.gitkraken.com/download)
 
 ---
@@ -202,9 +191,26 @@ VCS is simply a **better Google Drive**
   ### - Functionality
 ]
 .right-column[
+Pretty much everything I said just now:
 1. Track work, simplify things
+  - ex) no more of these:
+
+![Dirty workspace](dirty-workspace.png)
+
+]
+---
+.left-column[
+  ## Why we need to use GitHub
+  ### - Functionality
+]
+.right-column[
+Pretty much everything I said just now:
+1. Track work, simplify things
+  - ex) no more of these:
 1. Easier collaboration
-1. Lot of 
+  - ex) SSEL
+1. You can make your website with it
+  - ex) These slides
 ]
 ---
 .left-column[
@@ -214,9 +220,160 @@ VCS is simply a **better Google Drive**
 ]
 .right-column[
   1. Everyone else uses it - developer ecosystem
-  1. Easier collaboration
-  1. 
+    - ex) Opensource
+  1. Portfolio / LinkedIn for CS peeps
+    - ex) Anyone can see in what and how much you collaborated
+  1. Blog
 ]
+---
+class: middle, center, inverse
+
+# **How** to use Git & GitHub
+---
+# **How** to use Git & GitHub
+1. Create
+    - create repo (repository) on GitHub (README.md - markdown syntax)
+    - clone repo to local (remote vs local)
+1. Edit
+    - stage files (.gitignore)
+    - commit to local repo
+    - see changelog & snapshots
+    - push
+1. Real Git: Collaborate
+    - branch (off-topic: create blog with GitHub & Jekyll)
+    - pull request
+
+---
+.left-column[
+  ## Create
+  ### - Create repo
+]
+.right-column[
+1. In the upper right corner, next to your avatar or identicon, click `+` and then select `New repository`.
+1. Name your repository.
+1. Write a short description.
+1. Select `Initialize this repository with a README`.
+1. Click `Create repository`.
+]
+---
+![Create new repo](new-repo.png)
+---
+.left-column[
+  ## Create
+  ### - Create repo
+]
+.right-column[
+Let's write something in our README.md file:
+
+A more descriptive explanation of what the repo is for, or how to use the files, etc.
+
+If you made a repo for classwork, you can use this space for the syllabus.
+]
+---
+.left-column[
+  ## Create
+  ### - Create repo
+  ### - Clone repo into computer
+]
+.right-column[
+1. In upper left corner, click `Clone/New`
+1. If you have already signed in, you should see a globe icon. Click it to see your GitHub repos. Choose one and click `OK`.
+1. Set which folder you want to save your repo in.
+1. Check `Bookmark this repository` if it's not.
+1. Click `Clone`.
+]
+---
+![Clone repo](clone-repo.png)
+---
+.left-column[
+  ## Create
+  ### - Create repo
+  ### - Clone repo into computer
+]
+.right-column[
+Check to see if you have the README.md file inside the folder.
+
+You have successfully cloned your remote repository into your computer!
+]
+---
+class: middle, center, inverse
+# Edit your files locally and update the remote repository
+---
+.left-column[
+  ## Edit
+  ### - stage files
+]
+.right-column[
+  First step is to edit your files. Make some random files or edit ones you already have.
+
+  When you create, edit, or delete files, the change will show up automatically in SourceTree.
+
+  Let's `stage` it. This is the process of cherry-picking which files you want to update and which ones you want to ignore. The good thing about ignoring files is that you don't get dirty files that are in the middle of the sentence or a photo of yourself. (why would you have that tho)
+
+  For example, let's create a text file with my secret identity in it and then ignore it in SourceTree.
+]
+
+---
+.left-column[
+  ## Edit
+  ### - stage files
+  ### - commit to local repo
+]
+.right-column[
+  If you selected and staged which changes you want to keep online, write a short but explicit description of the changes you made and click `commit`. 
+
+  Literally, committing means you are going to keep these changes. It means that the changes you made are kept inside a local repository.
+
+  At this stage, the files online haven't been changed.
+]
+
+---
+.left-column[
+  ## Edit
+  ### - stage files
+  ### - commit to local repo
+  ### - see changelog & snapshots
+]
+.right-column[
+Once you made a commit, check the `History` tab of SourceTree. You can track all the changes you made. 
+
+This function is similar to Google Docs's but you can keep it organized in a more systematic manner.
+
+I'll talk about it later if I have time but this function is especially good for tracking whose change messed up the entire project. If that happens, we can always revert the changes.
+]
+
+---
+.left-column[
+  ## Edit
+  ### - stage files
+  ### - commit to local repo
+  ### - see changelog & snapshots
+  ### - push to remote repo
+]
+.right-column[
+If you push or sync it, the local and the remote repository will probably have identical files and history logs.
+
+Sometimes, when you're collaborating with people and someone already made a change to the remote repo, you might have to pick out which changes you want to keep. 
+
+This can seem messy, but it's straightforward once you understand what the error messages mean.
+
+Here's a diagram to help you imagine what we just did:
+
+]
+---
+
+![git working area diagram](git-diagram.png)
+
+---
+class: middle, center, inverse
+
+#Real Git: Collaborate
+##branching and requesting pulls
+
+---
+
+
+
 
 ---
 # Learn More
@@ -226,6 +383,7 @@ VCS is simply a **better Google Drive**
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [Create a blog/website with GitHub](https://jekyllrb.com/)
 - [Learn git with command lines](http://learngitbranching.js.org/)
+- [Pro Git](Pro%20Git.pdf) (book)
 
 
     </textarea>
