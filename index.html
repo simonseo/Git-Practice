@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Git 101</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Droid Serif';
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+      blockquote {
+        border-left: 4px solid #DDD;
+        font-weight: 400;
+        padding: 0 15px;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+
+# Git 101
+### Must-know skill for CS peeps
+.footnote[.red.bold[*] Brought to you by HackAD & Simon]
+---
+
+# Agenda
+
+1. Setup
+  - Create [github.com](github.com) account
+  - Install [GitHub Desktop](https://desktop.github.com/)
+1. Introduction to Version Control System
+1. **Why** we need to use GitHub
+1. **How** to use Git & GitHub
+  1. Create
+      - create repository on GitHub (README.md - markdown syntax)
+      - clone repo to local (remote vs local)
+  1. Edit
+      - stage files
+        -.gitignore
+      - commit to local repo
+      - see changelog & snapshots
+      - push
+  1. Collaborate
+      - branch (off-topic: create blog with GitHub)
+      - 
+
+---
+class: center, middle, inverse
+
+# Setup
+
+---
+# Setup
+Let's dive in head first.
+
+1. Create [github.com](github.com) account
+1. Install [GitHub Desktop](https://desktop.github.com/)
+  - Advanced users may prefer to use command lines
+  - At the end of the presentation, I'll tell you potentially better apps.
+  - Linux users can use [GitKraken](https://www.gitkraken.com/download)
+
+---
+class: center, middle, inverse
+
+##### While you do that,
+#VCS: version control system
+
+---
+# Version Control System
+
+From Pro Git:
+
+> Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later
+
+> ...in reality you can do this with nearly any type of file on a computer. If you are a graphic or web designer and want to keep every version of an image or layout (which you would most certainly want to), a Version Control System (VCS) is a very wise thing to use
+
+> ...Using a VCS also generally means that if you screw things up or lose files, you can easily recover. In addition, you get all this for very little overhead.
+
+---
+# Version Control System
+
+VCS is simply a **better Google Drive**
+
+1. revert files back to a previous state
+1. revert the entire project back to a previous state
+1. compare changes over time
+1. see who last modified something that might be causing a problem
+1. who introduced an issue and when, and more. 
+
+---
+# Learn More
+- Advanced Git apps: [SourceTree](https://www.sourcetreeapp.com/), [GitKraken](https://www.gitkraken.com/)
+- [GitHub intro page](https://guides.github.com/activities/hello-world/)
+- [GitHub flow tutorial](https://guides.github.com/introduction/flow/)
+- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Create a blog/website with GitHub](https://jekyllrb.com/)
+- [Learn git with command lines](http://learngitbranching.js.org/)
+
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
