@@ -57,7 +57,7 @@
       .inverse {
         background: #272822;
         color: #777872;
-        text-shadow: 0 0 20px #333;
+        /*text-shadow: 0 0 20px #333;*/
       }
       .inverse h1, .inverse h2 {
         color: #f3f3f3;
@@ -129,6 +129,7 @@ class: center, middle, inverse
 
 # Git 101
 ### Must-know skill for CS peeps
+### goo.gl/Z9qnTx
 .footnote[.red.bold[*] Brought to you by HackAD & Simon]
 ---
 
@@ -136,22 +137,10 @@ class: center, middle, inverse
 
 1. Setup
   - Create [github.com](github.com) account
-  - Install [GitHub Desktop](https://desktop.github.com/)
+  - Install [SourceTree](https://www.sourcetreeapp.com/)
 1. Introduction to Version Control System
 1. **Why** we need to use GitHub
 1. **How** to use Git & GitHub
-  1. Create
-      - create repository on GitHub (README.md - markdown syntax)
-      - clone repo to local (remote vs local)
-  1. Edit
-      - stage files
-        -.gitignore
-      - commit to local repo
-      - see changelog & snapshots
-      - push
-  1. Collaborate
-      - branch (off-topic: create blog with GitHub)
-      - 
 
 ---
 class: center, middle, inverse
@@ -163,9 +152,9 @@ class: center, middle, inverse
 Let's dive in head first.
 
 1. Create [github.com](github.com) account
-1. Install [GitHub Desktop](https://desktop.github.com/)
+1. Install [SourceTree](https://www.sourcetreeapp.com/)
+  - Super light users may prefer to use [GitHub Desktop](https://desktop.github.com)
   - Advanced users may prefer to use command lines
-  - At the end of the presentation, I'll tell you potentially better apps.
   - Linux users can use [GitKraken](https://www.gitkraken.com/download)
 
 ---
@@ -202,9 +191,26 @@ VCS is simply a **better Google Drive**
   ### - Functionality
 ]
 .right-column[
+Pretty much everything I said just now:
 1. Track work, simplify things
+  - ex) no more of these:
+
+![Dirty workspace](images/dirty-workspace.png)
+
+]
+---
+.left-column[
+  ## Why we need to use GitHub
+  ### - Functionality
+]
+.right-column[
+Pretty much everything I said just now:
+1. Track work, simplify things
+  - ex) no more of these:
 1. Easier collaboration
-1. Lot of 
+  - ex) SSEL
+1. You can make your website with it
+  - ex) These slides
 ]
 ---
 .left-column[
@@ -213,10 +219,374 @@ VCS is simply a **better Google Drive**
   ### - Professional World
 ]
 .right-column[
-  1. Everyone else uses it - developer ecosystem
-  1. Easier collaboration
-  1. 
+1. Everyone else uses it - developer ecosystem
+  - ex) Opensource
+1. Portfolio / LinkedIn for CS peeps
+  - ex) Anyone can see in what and how much you Branchingd
+1. Blog
 ]
+---
+class: middle, center
+#Questions or Comments?
+
+---
+class: middle, center, inverse
+
+# **How** to use Git & GitHub
+---
+# **How** to use Git & GitHub
+1. Create
+    - create repo (repository) on GitHub (README.md - markdown syntax)
+    - clone repo to local (remote vs local)
+1. Edit
+    - stage files (.gitignore)
+    - commit to local repo
+    - see changelog & snapshots
+    - push
+1. Real Git: Collaborate
+    - branch (off-topic: create blog with GitHub & Jekyll)
+    - pull request
+
+---
+.left-column[
+  ## Create
+  ### - Create repo
+]
+.right-column[
+1. In the upper right corner, next to your avatar or identicon, click `+` and then select `New repository`.
+1. Name your repository.
+1. Write a short description.
+1. Select `Initialize this repository with a README`.
+1. Click `Create repository`.
+]
+---
+![Create new repo](images/new-repo.png)
+---
+.left-column[
+  ## Create
+  ### - Create repo
+]
+.right-column[
+Let's write something in our README.md file:
+
+A more descriptive explanation of what the repo is for, or how to use the files, etc.
+
+If you made a repo for classwork, you can use this space for the syllabus.
+]
+---
+.left-column[
+  ## Create
+  ### - Create repo
+  ### - Clone repo into computer
+]
+.right-column[
+1. In upper left corner, click `Clone/New`
+1. If you have already signed in, you should see a globe icon. Click it to see your GitHub repos. Choose one and click `OK`.
+1. Set which folder you want to save your repo in.
+1. Check `Bookmark this repository` if it's not checked.
+1. Click `Clone`.
+]
+---
+![Clone repo](images/clone-repo.png)
+---
+.left-column[
+  ## Create
+  ### - Create repo
+  ### - Clone repo into computer
+]
+.right-column[
+Check to see if you have the README.md file inside the folder.
+
+If you see it, it means you have successfully cloned your remote repository into your computer!
+
+Now we can make new files or edit files inside the folder.
+]
+---
+class: middle, center, inverse
+# Edit your files locally and update the remote repository
+---
+.left-column[
+  ## Edit
+  ### - stage files
+]
+.right-column[
+  First step is to edit your files. Make some random files or edit ones you already have. 
+
+  If you don't know what to do, take a selfie and put the picture in your folder. 
+
+  Or type this into your README: 
+  ```
+  This repository was made against my will. Simon forced me to make it.
+  ```
+
+  When you create, edit, or delete files, SourceTree (our git program) detects changes using magic.
+
+]
+---
+.left-column[
+  ## Edit
+  ### - stage files
+]
+.right-column[
+
+  If you think it's time to upload to GitHub (or Google Drive) `stage` it by clicking `stage all`.
+
+  ![press stage all](images/before-staging.png)
+
+  This is the process of **cherry-picking which changes you want to keep** and which ones you want to ignore. 
+
+  The good thing about ignoring files is that you don't have to update files if you're still in the middle of the sentence, or if you don't want to upload a photo of yourself. (why would you have that tho)
+]
+
+---
+.left-column[
+  ## Edit
+  ### - stage files
+]
+.right-column[
+  #Demo Time!
+
+  Let's create a text file with my secret identity in it and then ignore it in SourceTree.
+]
+---
+.left-column[
+  ## Edit
+  ### - stage files
+  ### - commit to local repo
+]
+.right-column[
+  If you selected and staged which changes you want to keep online, write a short but explicit description of the changes you made and click `commit`. 
+
+  Literally, committing means you are going to keep these changes. It means that the changes you made are kept inside a local repository.
+
+  At this stage, the files online haven't been changed.
+]
+
+---
+.left-column[
+  ## Edit
+  ### - stage files
+  ### - commit to local repo
+  ### - see changelog & snapshots
+]
+.right-column[
+Once you made a commit, check the `History` tab of SourceTree. You can track all the changes you made. 
+
+This function is similar to Google Docs's but you can keep it organized more systematically.
+
+I'll talk about it later if I have time but this function is especially good for tracking whose change messed up the entire project. If that happens, we can always revert the changes.
+]
+
+---
+.left-column[
+  ## Edit
+  ### - stage files
+  ### - commit to local repo
+  ### - see changelog & snapshots
+  ### - push to remote repo
+]
+.right-column[
+If you push or sync it, the local and the remote repository will probably have identical files and history logs.
+
+Sometimes, when you're collaborating with people and someone already made a change to the remote repo, you might have to pick out which changes you want to keep. 
+
+This can seem messy, but it's straightforward once you understand what the error messages mean.
+
+Here's a diagram to help you imagine what we just did:
+
+]
+---
+
+![git working area diagram](images/git-diagram.png)
+---
+class: middle, center
+#Questions or Comments?
+
+---
+class: middle, center, inverse
+
+#Real Git: Collaborate
+##branching and requesting pulls
+
+---
+.left-column[
+  ## Branching
+  ### - branch
+]
+.right-column[
+Before we mess up other people's repositories, let's see which functions we'll use.
+
+The first is **branching.** I can work on separate aspects of the same project, and each can grow in different directions. To put this sentence into context imagine a giant robot.
+![building a 60m tall robot](images/robot.bmp)
+]
+---
+.left-column[
+  ## Branching
+  ### - branch
+]
+.right-column[
+A robot project can have different branches, each working on different limbs. Later when all the limbs are finished, we can merge them together.
+
+![branching is analogous to building a 60m tall robot](images/robot-collaborate.bmp)
+
+]
+---
+.left-column[
+  ## Branching
+  ### - branch
+]
+.right-column[
+If we're talking about intro to CS, all the branches would have the functions main() and draw(), but specific parts of the functions can look different.
+
+For example, if I'm making a poopdodger game, 
+- Me: PowerUp() function that changes settings of character.
+- My partner: GameOver() function that saves the highscore.
+
+![poopdodger instructions](images/poopdodger-instructions.png)
+]
+
+---
+.left-column[
+  ## Branching
+  ### - branch
+]
+.right-column[
+So let's do it. Click on the `branch` button on the ribbon menu. 
+
+![branching](images/branching.png)
+
+The `current branch` will be copied with the name specified in `new branch`. 
+]
+
+
+---
+.left-column[
+  ## Branching
+  ### - branch
+]
+.right-column[
+So let's do it. Click on the `branch` button on the ribbon menu. 
+
+![branching](images/branching.png)
+
+The `current branch` will be copied with the name specified in `new branch`. 
+
+You can name it specifically like above <br>
+(keywords: master, dev, features, debug ...)
+
+**unprofessional alert!** Or you can name it like how I did it for my last assignment  <br>
+(keywords: simon-branch, khaled-branch) 
+]
+
+
+---
+.left-column[
+  ## Branching
+  ### - branch
+]
+.right-column[
+Now make some changes to your files and commit/push.
+
+If you ran out of random creative ideas, try:
+
+```html
+features/poop-dealt
+
+This branch is for implementing the PoopDealt() function.
+TBH, Simon's game is a bit too dirty.
+```
+]
+---
+.left-column[
+  ## Branching
+  ### - branch
+  ### - merge
+]
+.right-column[
+We made Gundam's legs and arms separately, and now it's time to glue them together using `merge`.
+
+1. Double click a branch to select the one that you want to be the main branch. Often the main branch you'll merge into is called `master`.
+2. Select the branch that will be fused into your main branch. Click OK.
+
+After this, you won't be able to see Gundam's arms and legs on the list anymore since they were merged into the whole body.
+]
+---
+.left-column[
+  ## Collaborate
+  ### - branch
+  ### - merge
+]
+.right-column[
+Let's see what you just did:
+
+![branch and merge](images/branches.png)
+
+1. You made a branch, which is a copy of the main branch.
+1. You made some edits or implemented some stuff.
+1. You merged the branch back into the bigger branch.
+]
+---
+class: middle, center
+#Questions or Comments?
+---
+.left-column[
+  ## Collaborate
+  ### - collaborator
+]
+.right-column[
+Now time for real collaboration. (Which is only a few clicks different) There are different ways to do this. Here's one way.
+1. Add your partner as a collaborator in your repository > settings > collaborators
+
+This grants your partner permission to contribute to your repository.
+
+]
+---
+![fork](images/fork.png)
+---
+.left-column[
+  ## Collaborate
+  ### - collaborator
+  ### - branch
+]
+.right-column[
+1. Accept your partner's invite by going to notifications
+
+1. Clone the repository to your computer. If you don't remember how to clone, go to [slide #17](#17).
+
+1. Create a branch. If you don't remember how to branch, go to [slide #34](#34).
+
+1. Make some edits, commit, and push from SourceTree.
+]
+
+---
+.left-column[
+  ## Collaborate
+  ### - collaborator
+  ### - branch
+  ### - pull request & merge
+]
+.right-column[
+1. Go to the repository page on GitHub and make a Pull Request.
+
+![pull request](images/pull-request.png)
+
+This means you are requesting to the owner to merge your edits into a branch. 
+
+If the owner likes it, they can keep it by merging. Since you are a collaborator, you also have owner power. You can approve your own pull request.
+
+]
+
+---
+.left-column[
+  ## Collaborate
+  ### - collaborator
+  ### - branch
+  ### - pull request & merge
+]
+.right-column[
+By keeping this rule: **branch, pull request, merge**, you can keep everything organized!
+]
+
 
 ---
 # Learn More
@@ -226,6 +596,7 @@ VCS is simply a **better Google Drive**
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [Create a blog/website with GitHub](https://jekyllrb.com/)
 - [Learn git with command lines](http://learngitbranching.js.org/)
+- [Pro Git](Pro%20Git.pdf) (book)
 
 
     </textarea>
